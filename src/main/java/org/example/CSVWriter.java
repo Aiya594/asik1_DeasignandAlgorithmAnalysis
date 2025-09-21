@@ -13,8 +13,8 @@ public class CSVWriter {
         this.file=file;
     }
 
-    public void writer(String algorithm, int size,
-                       int n, long time, Metrics metrics ){
+    public void writer(String algorithm, int n,int size,
+                        long time, Metrics metrics ){
 
         //FileWriter is a class that opens file to write there info
         //true is for writing new info in the end of the file(like append() do in arrays)
@@ -22,10 +22,10 @@ public class CSVWriter {
 
         try (PrintWriter pw = new PrintWriter(new FileWriter(file, true))){
             if (!headerWritten){
-                pw.println("algorithm,size,n,time,depth,comparisons");
+                pw.println("ALGORITHM,N,SIZE,TIME,DEPTH,COMPARISONS");
                 headerWritten = true;
             }
-            pw.printf("%s,%d,%d,%d,%d,%d\n",algorithm, size,n,time,
+            pw.printf("%s,%d,%d,%d,%d,%d\n",algorithm,n, size,time,
                     metrics.getRecursionDepth(),metrics.getCompare());
         }catch (IOException e) {
             //error handlinf for any problem connected with file, prints error message
