@@ -2,39 +2,21 @@ package org.example;
 
 import java.util.Arrays;
 
+import static org.example.Utils.insertionSort;
+
 public class MergeSort {
     private static final int cutOff=15;
 
     private static Metrics metrics;
 
 
-    private static void insertionSort(int[] arr,int l, int r) {
 
-        for (int i = l + 1; i <= r; i++) {
-            int element = arr[i];
-            int j = i - 1;
-            while (j >= l) {
-
-                metrics.incrementCompare();
-
-                if (arr[j] > element) {
-                    arr[j + 1] = arr[j];
-                    j--;
-
-                } else {
-                    break;
-                }
-            }
-            arr[j + 1] = element;
-        }
-
-    }
 
     private static void mergeSort(int[] arr, int[] buf, int l, int r) {
         metrics.enterRecursion();
 
         if (r-l+1<=cutOff){
-            insertionSort(arr, l, r);
+            insertionSort(arr, l, r,metrics);
 
             metrics.exitRecursion();
             return;

@@ -46,4 +46,26 @@ public class Utils {
         return i + 1;
     }
 
+    public static void insertionSort(int[] arr,int l, int r,Metrics metrics) {
+
+        for (int i = l + 1; i <= r; i++) {
+            int element = arr[i];
+            int j = i - 1;
+            while (j >= l) {
+
+                metrics.incrementCompare();
+
+                if (arr[j] > element) {
+                    arr[j + 1] = arr[j];
+                    j--;
+
+                } else {
+                    break;
+                }
+            }
+            arr[j + 1] = element;
+        }
+
+    }
+
 }
