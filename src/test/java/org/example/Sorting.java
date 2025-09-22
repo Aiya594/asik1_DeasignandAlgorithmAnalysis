@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class Sorting {
     @Test
     void adversarialArraysTest(){
-        CSVWriter csv=new CSVWriter("metrics.csv");
+        CSVWriter csv=new CSVWriter("sortingMetrics.csv");
         int count = 0;
         Metrics metrics = new Metrics();
 
@@ -61,7 +61,7 @@ public class Sorting {
     void randomArraysTest(){
         Random rand =new Random();
 
-        CSVWriter csv=new CSVWriter("metrics.csv");
+        CSVWriter csv=new CSVWriter("sortingMetrics.csv");
         Metrics metrics = new Metrics();
 
         for (int i =0; i<100; i++){
