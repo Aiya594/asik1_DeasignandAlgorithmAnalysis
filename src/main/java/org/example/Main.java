@@ -11,9 +11,13 @@ public class Main {
             help();
             return;
         }
+
         for (String arg : args) {
             if (arg.equals("--help") || arg.equals("help")) {
                 help();
+                break;
+            } else if (arg.equals("bench")){
+                Benchmark.benchmark();
                 break;
             }
         }
