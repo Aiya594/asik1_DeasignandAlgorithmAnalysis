@@ -35,6 +35,25 @@
                     <useModulePath>false</useModulePath>
                 </configuration>
             </plugin>
+
+
+<!--            Plugin for building Jar main-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.example.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
         </plugins>
+
+
     </build>
+
+
 </project>
