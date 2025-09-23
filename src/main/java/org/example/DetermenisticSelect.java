@@ -4,6 +4,7 @@ import static org.example.Utils.insertionSort;
 import static org.example.Utils.swap;
 
 public class DetermenisticSelect {
+
     public static int select(int[] arr, int left, int right, int k, Metrics metrics) {
         while (true) {
             if (left == right) {
