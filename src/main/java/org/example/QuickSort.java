@@ -9,9 +9,6 @@ public class QuickSort {
 
     private static Metrics metrics;
 
-
-
-
     private static void quickSort(int[] arr, int low, int high){
 
         metrics.enterRecursion();

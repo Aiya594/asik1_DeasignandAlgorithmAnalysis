@@ -9,9 +9,6 @@ public class MergeSort {
 
     private static Metrics metrics;
 
-
-
-
     private static void mergeSort(int[] arr, int[] buf, int l, int r) {
         metrics.enterRecursion();
 
