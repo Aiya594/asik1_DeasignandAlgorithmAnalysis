@@ -1,8 +1,4 @@
 package org.example;
-
-import java.util.Arrays;
-import java.util.Random;
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -27,7 +23,10 @@ public class Main {
     }
     private static void help(){
         System.out.println("""
-                Usage: java -jar  .\\target\\asik1_designandalgorithms-1.0-SNAPSHOT..jar <algorithm> [options] \n            
+                Usage: 
+                java -cp target/asik1_designandalgorithms-1.0-SNAPSHOT.jar org.example.Main bench \n
+                
+                java -cp target/asik1_designandalgorithms-1.0-SNAPSHOT.jar org.example.Main <algorithm> [options] \n            
                             <algorithm>:
                               merge       Run Merge Sort
                               quick       Run Quick Sort
